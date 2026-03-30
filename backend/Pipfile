@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "<1.0,>=0.116.0"
+sqlalchemy = "<3.0,>=2.0.41"
+asyncpg = "<1.0,>=0.30.0"
+alembic = "<2.0,>=1.16.0"
+pydantic = "<3.0,>=2.12.0"
+pydantic-settings = "<3.0,>=2.10.0"
+python-dotenv = "<2.0,>=1.1.0"
+openai = "<2.0,>=1.75.0"
+python-dateutil = "<3.0,>=2.9.0.post0"
+pytest = "<9.0,>=8.4.0"
+pytest-asyncio = "<1.0,>=0.26.0"
+httpx = "<1.0,>=0.28.1"
+aiosqlite = "<1.0,>=0.21.0"
+uvicorn = {extras = ["standard"], version = "<1.0,>=0.35.0"}
+psycopg = {extras = ["binary"], version = "<4.0,>=3.2.0"}
+
+[dev-packages]
+
+[scripts]
+start = "python scripts/dev_server.py"
+migrate = "python scripts/migrate.py"
+ai-test = "python scripts/test_ai_provider.py"
+
+[requires]
+python_version = "3.14"
