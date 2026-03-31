@@ -1,0 +1,29 @@
+# Python cache / virtualenv
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# VCS / editor
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Test and local artifacts
+tests/
+*.db
+tmp_*.json
+
+# Build / misc
+Dockerfile*
+*.log
