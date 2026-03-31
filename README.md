@@ -59,9 +59,17 @@ DIRECT_DATABASE_URL=postgresql://user:pass@host-direct/db?sslmode=require&channe
 
 # AI Provider
 AI_ENABLED=true
+
+# Provider: openai | deepseek 
 AI_PROVIDER=deepseek
+
+# Model name (examples: gpt-4.1-mini, deepseek-chat)
 AI_MODEL=deepseek-chat
+
+# key 
 AI_API_KEY=replace_me
+
+
 AI_BASE_URL=https://api.deepseek.com
 AI_TIMEOUT_SECONDS=30
 AI_ALLOW_FALLBACK=true
