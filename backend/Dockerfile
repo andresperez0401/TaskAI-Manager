@@ -8,16 +8,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app/backend
 
 # Install deps in a cache-friendly layer
-COPY backend/requirements.txt ./requirements.txt
+COPY requirements.txt ./requirements.txt
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy app code
-COPY backend/app ./app
-COPY backend/core ./core
-COPY backend/modules ./modules
-COPY backend/migrations ./migrations
-COPY backend/scripts ./scripts
-COPY backend/alembic.ini ./alembic.ini
+COPY app ./app
+COPY core ./core
+COPY modules ./modules
+COPY migrations ./migrations
+COPY scripts ./scripts
+COPY alembic.ini ./alembic.ini
 
 # Run as non-root in production
 RUN useradd -m appuser && chown -R appuser:appuser /app
